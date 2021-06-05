@@ -1,0 +1,695 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    transition: none;
+}
+img {
+    max-width: 100%;
+}
+:root {
+    --main--color: #212832;
+    --red_theme: red;
+    --header-height: 120px;
+    --aside-width:80px;
+    --main-content-hight:calc(969px - var(--header-height));
+    --header-top-postion:-30px;
+}
+header {
+    background-color: var(--main--color);
+    height:var(--header-height);
+}
+header .container {
+    height: inherit;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    align-items: center;
+}
+header .container .search-bar {
+    align-items: center;
+    position: relative;
+    top: var(--header-top-postion);
+    width: 500px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.search-bar .search-button {
+    width: 65px;
+    position: absolute;
+    height: 100%;
+    background-color: var(--red_theme);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    left: 87%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .container input {
+    max-height: 22px;
+    border: none;
+    font-size: 25px;
+    width: 460px;
+}
+header .container input:focus {
+    outline: none;
+}
+header i:hover {
+    cursor: pointer;
+
+}
+header hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    position: relative;
+    top: -50px;
+}
+.logo {
+    width: 200px;
+    height: 150px;
+    background: var(--red_theme);
+    border-radius: 50% / 10%;
+    transform: scale(-0.2);
+    margin: 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: var(--header-top-postion);
+}
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5% / 50%;
+}
+.logo::after {
+    content: "YOUTUBE";
+    position: absolute;
+    color: white;
+    font-size: 102px;
+    left: -414px;
+    transform: rotate(180deg);
+    top: 21px;
+}
+.logo i {
+    transform: scale(7.5) rotate(180deg);
+}
+.logo .my-list {
+    position: absolute;
+    top: 72px;
+    left: 435px;
+}
+header nav {
+    width: 190px;
+    display: flex;
+    justify-content: space-around;
+    top: 1px;
+    position: relative;
+    top: var(--header-top-postion);
+}
+header .fa-microphone {
+    color: white;
+    transform: scale(1.5);
+    position: absolute;
+    left: 103.05%;
+    top: 12px;
+
+}
+header .container nav {
+    color: white;
+    transform: scale(1.1);
+    width: 230px;
+}
+header nav i {
+    position: relative;
+}
+header nav .fa-video::after {
+    position: absolute;
+    content: "Create";
+    top: 22px;
+    font-size: 10px;
+    background-color: #5B5B5B;
+    padding: 4px;
+    border-radius: 3px;
+    left: -11px;
+    opacity: 0;
+    
+}
+.fa-video:hover::after {
+    opacity: 100;
+}
+.fa-bell::after {
+    position: absolute;
+    content: "notification";
+    top: 22px;
+    font-size: 10px;
+    background-color: #5B5B5B;
+    padding: 4px;
+    border-radius: 3px;
+    left: -20px;
+    opacity: 0;
+    
+}
+.fa-bell:hover::after {
+    opacity: 100;
+}
+.fa-bars::after {
+    position: absolute;
+    content: "Youtube App";
+    top: 22px;
+    font-size: 8px;
+    background-color: #5B5B5B;
+    padding: 4px;
+    border-radius: 3px;
+    left: -18px;
+    width: 45px;
+    opacity: 0;
+}
+.fa-bars:hover::after {
+    opacity: 100;
+}
+.fa-microphone::after {
+    position: absolute;
+    content: "microphone";
+    top: 22px;
+    font-size: 7px;
+    background-color: #5B5B5B;
+    padding: 4px;
+    border-radius: 3px;
+    left: -14px;
+    opacity: 0;
+}
+.fa-microphone:hover::after{
+    opacity: 100;
+}
+.fa-user-circle::after {
+    position: absolute;
+    content: "profile";
+    top: 22px;
+    font-size: 10px;
+    background-color: #5B5B5B;
+    padding: 4px;
+    border-radius: 3px;
+    left: -8px;
+    opacity: 0;
+}
+.fa-user-circle:hover::after
+{
+    opacity: 100;
+}
+.categories {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    top: -49px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.categories > div {
+    border: 1px solid white;
+    border-radius:12px;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 13px;
+    height: fit-content;
+    color: white;
+}
+.categories > div:hover {
+    cursor:pointer;
+    background-color: rgb(115, 115, 115);
+}
+.main-contant {
+    height: var(--main-content-hight);
+}
+aside {
+    background-color: var(--main--color);
+    width: var(--aside-width);
+    height:100%;
+    position: relative;
+    float: left;
+
+}
+.aside-icons {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 368px;
+    padding-top: 10px;
+    position: absolute;
+    left: 7px;
+    top: 16px;
+}
+.aside-icons > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85rem;
+    justify-content: space-between;
+    height: 40px;
+}
+.aside-icons > div i {
+    transform: scale(1.5)
+}
+.video-container {
+    width: calc(100% - var(--aside-width));
+    height: 100%;
+    float: right;
+}
+.video-container .recomended > div {
+    height: 175px;
+    width: 300px;
+    position: relative;
+    
+}
+.video-container .recomended img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    
+}
+
+.video-container .recomended {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+.video-container .recomended::before {
+    content: "Recommended";
+    position: absolute;
+    left: 28px;
+    top: -35px;
+    font-size: 20px;
+    
+}
+.video-container .recomended > div  i {
+    color: white;
+    position: absolute;
+    transform: scale(1.7);
+    left: 50%;
+    top: 46%;
+}
+.video-container .recomended > div .video-time {
+    width: 60px;
+    background-color: rgb(115, 115, 115);
+    padding: 7px;
+    text-align: center;
+    border-radius: 21px;
+    color: white;
+    position: absolute;
+    left: 75%;
+    top: 76%;
+    box-shadow: 0 0 0 inset red;
+}
+.video-container .recomended > div:hover {
+    cursor: pointer;
+}
+.video-container .recomended > div:hover i {
+    transform: scale(1.9);
+}
+
+.video-container .recomended > div:hover .video-time {
+    box-shadow: 0 0 9px 4px red;
+}
+.video-container .recomended > div .animation-title {
+    position: absolute;
+    overflow: hidden;
+    color: white;
+    top: 59%;
+    left: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 65px;
+    height: 30px;
+}
+
+.video-container .recomended > div .animation-title  span {
+    position: relative;
+    top: 0px;
+}
+.video-container .recomended > div .animation-title span:nth-child(4) ~ span  {
+    color: red;
+}
+/*time*/
+.video-container .recomended > div .animation-title  span:nth-child(1) ,.video-container .recomended > div .animation-title  span:nth-child(5) {
+    transition: 0.3s;
+}
+.video-container .recomended > div .animation-title  span:nth-child(2),.video-container .recomended > div .animation-title  span:nth-child(6) {
+    transition: 0.5s;
+}
+.video-container .recomended > div .animation-title  span:nth-child(3),.video-container .recomended > div .animation-title  span:nth-child(7) {
+    transition: 0.8s;
+}
+.video-container .recomended > div .animation-title  span:nth-child(4),.video-container .recomended > div .animation-title  span:nth-child(8) {
+    transition: 1s;
+}
+/*time*/
+
+
+
+.video-container .recomended > div:hover .animation-title span:nth-child(1) ,.video-container .recomended > div:hover .animation-title span:nth-child(2),.video-container .recomended > div:hover .animation-title span:nth-child(3),.video-container .recomended > div:hover .animation-title span:nth-child(4) {
+    top: -30px;
+}
+.video-container .recomended > div:hover .animation-title span:nth-child(5),.video-container .recomended > div:hover .animation-title span:nth-child(6),.video-container .recomended > div:hover .animation-title span:nth-child(7),.video-container .recomended > div:hover .animation-title span:nth-child(8) {
+    top: -28px;
+}
+.video-container .recomended > div .video-title {
+    display: flex;
+    padding: 10px;
+    align-content: flex-start;
+    justify-content: space-between;
+    width: 240px;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    top: 73%;
+    left: 1px;
+}
+.video-container .recomended > div .video-title img {
+    width: 25px;
+    border-radius: 50%;
+    height: 26px;
+    margin-right: 10px;
+    border: 2px solid;
+}
+.video-container .Recently-upload {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+.video-container .Recently-upload::before {
+    content: "Recently upload";
+    position: absolute;
+    left: 35px;
+    top: -35px;
+    font-size: 20px;
+    
+}
+.video-container .Recently-upload > div {
+    height: 127px;
+    width: 267px;
+    position: relative;
+    
+}
+.video-container .Recently-upload img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    
+}
+.video-container .Recently-upload > div .video-title {
+    display: flex;
+    padding: 10px;
+    align-content: flex-start;
+    justify-content: space-between;
+    width: 240px;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 1px;
+}
+.Recently-upload:hover {
+    cursor: pointer;
+}
+.video-container .Recently-upload > div .video-title img {
+    width: 25px;
+    border-radius: 50%;
+    height: 26px;
+    margin-right: 10px;
+    border: 2px solid;
+}
+.video-container .Recently-upload > div  i {
+    color: white;
+    position: absolute;
+    transform: scale(1.7);
+    left: 50%;
+    top: 46%;
+}
+.front {
+    transition: 250ms;
+}
+.front > img {
+    height: 220px;
+    border-radius: 10px;
+}
+.video-container .channels {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+.front .name {
+    margin: .95em 0;
+    position: relative;
+    top: -13px;
+}
+.channels > div {
+    width: 12.5em;
+    position: relative;
+    cursor: pointer;
+}
+.streamers {
+    display: flex;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.streamers img {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 3px solid var(--main--color);
+}
+.rank {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0.75em;
+    color: white;
+    font-size: 1.154rem;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 0.5em 0.5em 0.75em ;
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 51% 84%, 0 100%, 0 51%, 0 0);
+    z-index: 1;
+    transition: transform 200ms cubic-bezier(0.21, 1.00, 0.81, 1.00);
+}
+.back {
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+    color: white;
+    transform: translateY(35%);
+
+}
+.back .videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    font-size: 0.95em;
+}
+.back .streaming-info {
+    columns: 2;
+    column-rule: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 0.4em 0;
+}
+.back .streaming-info .game-stat {
+    font-size: 1.125rem;
+    text-align: center;
+    color: white;
+}
+.back .streaming-info .game-stat span {
+    display: block;
+    font-size: 00.85rem;
+    text-align: center;
+}
+.background {
+    background-color: var(--main--color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1 ;
+    transform: scale(0.5, 0.9);
+    border-radius: 10px;
+    opacity: 0;
+}
+.channels > div:hover .background {
+    transform: scale(1.3, 1.2);
+    opacity: 1;
+    bottom: 25px;
+    transition: transform 200ms cubic-bezier(0.21, 1.00, 0.81, 1.00), opacity 100ms linear;
+}
+.channels > div:hover .front {
+    transform: translateY(-30%) scale(0.7);
+}
+.channels > div:hover .stats {
+    opacity: 0;
+}
+
+.channels > div:hover .name {
+    animation: gameName 250ms forwards;
+    font-size: 25px;
+    color: white;
+}
+.channels > div:hover .rank {
+    transform: translate(100%,-67%);
+}
+.channels > div:hover .back {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 250ms ease, opacity 150ms linear;
+
+}
+.btn {
+    cursor: pointer;
+    border: 0;
+    background: rgb(0, 76, 199);
+    border-radius: 100vw;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 1.5em;
+    box-shadow: 0px 5px 3px 2px black;
+    position: relative;
+    top: -7px;
+}
+.videos img {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 3px solid var(--main--color);
+    margin-bottom: 5px;
+}
+.viewers::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: -15px;
+    color: var(--main--color);
+}
+.viewers {
+    position: relative;
+}
+.icon {
+    position: relative;
+    transition: transform ease-in-out 200ms;
+}
+.video:hover  .icon {
+    transform: translateY(-15%);
+
+}
+.videos .icon:hover {
+    transform: scale(1.07) translateY(-15%);
+}
+.video:hover .icon::before {
+    opacity: 1;
+}
+.icon::before,.icon::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 50%;
+    opacity: 0;
+}
+.icon::before {
+    content: "\f04b";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    background: red;
+    display: grid;
+    place-items: center;
+    font-size: 1em;
+    z-index: 10;
+    transition:
+    opacity 200ms linear, 
+    background-color 100ms linear;
+
+}
+.icon:hover::before {
+    background-color: #cc0202;
+}
+.icon:hover::after {
+    background: red;
+    animation: plus 1250ms infinite;
+    z-index: 1;
+}
+
+
+@keyframes gameName {
+    0% {
+        text-align: left;
+        opacity: 1;
+    }
+    20% {
+        text-align: left;
+        opacity: 0;
+    }
+    50% {
+        text-align: center;
+        opacity: 0;
+    }
+    100% {
+        text-align: center;
+        opacity: 1;
+    }
+}
+@keyframes plus {
+    0% {
+        transform: scale(0.95);
+        opacity: .075;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0.1;
+    }
+}
